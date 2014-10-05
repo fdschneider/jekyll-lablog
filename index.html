@@ -4,14 +4,22 @@ layout: default
 
 <div class="home">
 
-  <h1>Posts</h1>
+  <h1 class="page-heading">Posts</h1>
 
-  <ul class="posts">
+  <ul class="post-list">
     {% for post in site.posts %}
-      <li><span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> <a class="post-link" href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% if post.updated %}
+          <span class="post-meta"><b>, updated: {{ post.updated | date_to_long_string }} </b></span>
+        {% endif %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
