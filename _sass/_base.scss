@@ -171,6 +171,48 @@ pre {
 }
 
 
+/**
+ * Tags
+ */
+
+
+.tag {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 60%;
+  font-weight: bold;
+  line-height: 1;
+  color: $tag-default-fg;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+
+  @include tag-variant($tag-default-bg);
+
+}
+
+// Add hover effects, but only for links
+a.tag {
+  &:hover {
+    color: lighten($tag-default-fg, 10%);
+    text-decoration: none;
+    cursor: pointer;
+
+  }
+
+  &:visited,
+  &:focus {
+    color: $tag-default-fg;
+  }
+}
+
 
 /**
  * Clearfix

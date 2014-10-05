@@ -181,6 +181,7 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    white-space: nowrap;
 }
 
 .post-link {
@@ -233,4 +234,9 @@
             font-size: 18px;
         }
     }
+}
+
+.tag_list {
+  font-size: 120%;
+
 }

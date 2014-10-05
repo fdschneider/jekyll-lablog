@@ -24,7 +24,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+$tag-default-bg:   lighten($grey-color, 20%);
+$tag-default-fg:   white;
 
 // Using media queries with like this:
 // @include media-query($palm) {
@@ -37,6 +38,20 @@ $on-laptop:        800px;
     @media screen and (max-width: $device) {
         @content;
     }
+}
+
+// color tags
+
+// darken tag background
+@mixin tag-variant($color) {
+  background-color: $color;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: darken($color, 10%);
+    }
+  }
 }
 
 
