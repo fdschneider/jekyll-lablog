@@ -9,10 +9,8 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        {% if post.updated %}
-          <span class="post-meta"><b> • updated: {{ post.updated | date_to_long_string }} </b></span>
-        {% endif %}
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.updated %} • <b>updated: </b>{{ post.updated | date_to_long_string }}{% endif %}{% if post.author %} • {{ post.author }}{% endif %}{% if post.place %} • {{ post.place }}{% endif %} </span>
+
 
         {% if post.tags %}  <span class="post-meta"> • </span>
          {% for tag in post.tags %}

@@ -14,8 +14,6 @@ github_username: fdschneider
 twitter_username: f_d_schneider
 website : http://fdschneider.github.io
 
-
-
 # Build settings
 markdown: kramdown
 
@@ -26,3 +24,5 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "post"
+      place: "Montpellier, France"
+      author: "Flo"
