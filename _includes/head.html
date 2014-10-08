@@ -11,6 +11,21 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+imageFont: null,
+extensions: ["tex2jax.js"],
+jax: ["input/TeX","output/HTML-CSS"],
+tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} ,
+menuSettings: { context: "Browser" }
+});
+</script>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 {% include site_tags.html %}
 
 </head>
