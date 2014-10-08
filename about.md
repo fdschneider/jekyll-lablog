@@ -9,7 +9,18 @@ You can view the [code and documentation on GitHub](https://github.com/fdschneid
 
     git clone git@github.com:fdschneider/jekyll-lablog.git
 
+Install [Jekyll](http://jekyllrb.com/) and run
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+    jekyll serve /jekyll-lablog
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Open your browser and navigate to `localhost:4000`.
+
+
+### Features:
+
+- **Todo Lists** using the GitHub syntax `- [ ]`.
+- **Tags** allow you to link posts of a certain topic, project or field of interest. Buttons for the **next and previous post** and automatic linking to **related posts** based on common tags facilitates browsing through posts.
+- **Post Archive** is a chronological list of all posts, which is perfect for the use as a lab diary.  
+- **Multi-authoring** for entire research groups due to an `author` tag in the front-matter
+- **log your geolocation** with the `place` parameter
+- **math equations** using [mathjax.org]() (renders $ \LaTeX $ syntax).

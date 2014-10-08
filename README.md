@@ -26,7 +26,7 @@ This is a template for the static site generator [Jekyll](http://jekyllrb.com/).
 
 ## Requirements
 
-- Jekyll
+- [Jekyll](http://jekyllrb.com/)
 - a convenient text editor (e.g. Geany, Notepad, Notepad++, Atom)
 
 Recommended:
@@ -36,7 +36,12 @@ Recommended:
 
 ## Set-up
 
-You can clone this repository to your computer and use `jekyll serve` to run it locally. It will be available in your browser under the URL `localhost:4000`.
+You can clone this repository
+
+    git clone git@github.com:fdschneider/jekyll-lablog.git
+
+and use `jekyll serve` to run it locally. It will be available in your browser under the URL `localhost:4000`.
+
 
 ## Use
 
@@ -87,11 +92,32 @@ You can create new task list files by setting them up with a frontmatter that sp
 of course you can change the title, but the layout *must* be set as `tasks`. You can write nested task lists, which opens wonderful possibilities for project management. Imagine that tasks can use links to connect to posts on the site, to e-mail addresses, to websites.
 
 
-### Deployment
+## Customize
+
+A few things require your personalized entries, to link the log to your person and to deliver additional information about
+
+### Title and Author information
+
+### About page
+
+### version control
+
+### License
+
+### Theme color
+
+### Rmarkdown or knitr reports
+
+### Configure Jekyll
+
+
+
+
+## Deployment
 
 If you want to access the log from anywhere on the internet you will need one of the following solutions. For these you will have to specify the `url` and `baseurl`, as well as the target directory for generation `destination: `,  parameters in `_config.yml`. Just enter the values described below.  
 
-#### Dropbox
+### Dropbox
 
 In my opinion the perfect solution for a quick and semi-private deployment: Dropbox can serve a static site placed in the `/Public` folder. Just keep the log directory anywhere on your PC, but preferably in a private section of your Dropbox and specify `destination: ../../Public/lablog `, i.e. the relative path from your blog directory to the target directory. Then build your blog.
 
@@ -101,15 +127,14 @@ Now, wait for the sync to happen and go to your Dropbox account online, navigate
 
 Then set
 
-    url "https://dl.dropboxusercontent.com"
-    baseurl "u/xxxxxx/lablog"
+    url: "https://dl.dropboxusercontent.com"
+    baseurl: "u/xxxxxx/lablog"
 
 Now build again and navigate in your browser to `https://dl.dropboxusercontent.com/u/xxxxxx/lablog/index.html`
 
 Save this long, cryptic link as a bookmark or to load at browser start. For the future, all you need is to re-run the simple `jekyll build` command each time you updated a file.
 
-
-#### GitHub pages
+### GitHub pages
 
 Advantage:
 
@@ -127,31 +152,13 @@ GitHub.com is providing free webhosting of static web content. Even better it  a
 
 Specify:
 
-    url "https://user.github.com"
-    baseurl "lablog"
-
+    url: "https://user.github.com"
+    baseurl: "/lablog"
 
 
 #### any other webserver
 
 If you want to keep it truly private, the only solution will be a webserver.
-
-
-## Customize
-
-### Title and Author information
-
-### About page
-
-### version control
-
-### License
-
-### Theme color
-
-### Rmarkdown or knitr reports
-
-### Configure Jekyll
 
 
 
