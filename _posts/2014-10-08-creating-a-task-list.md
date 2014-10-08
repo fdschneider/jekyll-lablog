@@ -1,6 +1,10 @@
 ---
 title: "Creating a Task list"
 date: "2014-10-08"
+tags:
+ - soup
+ - tasks
+
 ---
 
 You can create new task list files by setting them up with a frontmatter that specifies
