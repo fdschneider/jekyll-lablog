@@ -12,7 +12,7 @@ name : Your Name
 email :
 github_username:
 twitter_username:
-website :
+website : git@github.com:fdschneider/jekyll-lablog.git
 
 # Build settings
 markdown: kramdown
