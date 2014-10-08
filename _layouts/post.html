@@ -32,7 +32,7 @@ layout: default
 <ul>
 {% endif %}
 <li class="relatedPost">
-<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}
+<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
 {% if post.series %}
 (Series: {{ post.series }})
 {% endif %}

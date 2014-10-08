@@ -1,7 +1,9 @@
 
+<div class="wrapper">
+
 {% if page.next %}
 <div class = "turn" style = " right: 0px" >
- <a rel = "next" href="{{ page.next.url }}"> <span> &rsaquo; </span></a>
+ <a rel = "next" href="{{ page.next.url | prepend: site.baseurl }}"> <span> &rsaquo; </span></a>
 </div>
 
 {% else %}
@@ -13,7 +15,7 @@
 
 {% if page.previous %}
 <div class = "turn" style = " left: 0px" >
- <a rel = "prev" href="{{ page.previous.url }}"> <span> &lsaquo; </span></a>
+ <a rel = "prev" href="{{ page.previous.url | prepend: site.baseurl }}"> <span> &lsaquo; </span></a>
 </div>
 
 {% else %}
@@ -21,3 +23,5 @@
   <span> &lsaquo; </span>
 </div>
 {% endif %}
+
+</div>
