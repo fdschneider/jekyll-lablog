@@ -215,6 +215,10 @@ a.tag {
 
 
 
+
+/**
+ * browse buttons
+ */
 /** TODO: Make responsive and use variables and mixins **/
 .button {
 position: fixed;
@@ -258,6 +262,64 @@ z-index: 1;
 
 
 
+/**
+ * Tasklists
+ */
+   ul.tasklist {
+      list-style-type: none;
+      line-height: $base-font-size * 2;
+
+    li {
+      text-indent: -1.4em;
+      font-size: $base-font-size * 1.2;
+
+
+        &:before {
+        float: left;
+        width: 1.4em;
+      }
+    }
+
+    li.box_done {
+      color: $grey-color;
+      text-decoration: line-through;
+      &:before {
+        content: "\2611\ ";
+        color: $grey-color;
+      }
+    }
+
+    li.box:before {
+        content: "\2610\ ";
+        color: $grey-color;
+    }
+
+    &:first-child {
+      line-height: $base-font-size * 1.5;
+    padding-bottom: 0.5em;
+
+    li {
+      font-size: $base-font-size;
+      text-indent: -1.4em;
+
+      &:before {
+        float: left;
+        width: 1.4em;
+      }
+    }
+    li.box_done:before {
+        content: "\2611\ ";
+        color: $grey-color;
+    }
+
+    li.box:before {
+        content: "\2610\ ";
+        color: $grey-color;
+    }
+
+    }
+
+  }
 
 /**
  * Clearfix
