@@ -1,16 +1,32 @@
 lablog: a jekyll template
 ==============================
 
-This is a template for the static site generator [Jekyll](http://jekyllrb.com/). based on [Jekyll's default theme by jglovier](https://github.com/jglovier/jekyll-new). It adds functionality that targets at the use as a research log or notebook.
+This is a template for the static site generator [Jekyll](http://jekyllrb.com/). based on [Jekyll's default theme by jglovier](https://github.com/jglovier/jekyll-new). It adds functionality that targets at the use as a [lab notebook](https://en.wikipedia.org/wiki/Lab_notebook), research log and knowledge base, for you personally or for collaborative work.
 
-## What is a research log?
+## What is a lab notebook?
 
-- write daily logs
-- link information
-- draft articles and essays
-- build a knowledgebase
+> Researchers use a lab notebook to document their hypotheses, experiments and initial analysis or interpretation of these experiments. The notebook serves as an organizational tool, a memory aid, and can also have a role in protecting any intellectual property that comes from the research.
+
+says [Wikipedia](https://en.wikipedia.org/wiki/Lab_notebook)
+
+![
+English: Pages 40-1 of Alexander Graham Bell's unpublished laboratory notebook (1875-76), describing first successful experiment with the telephone.
+](https://upload.wikimedia.org/wikipedia/commons/0/0c/AGBell_Notebook.jpg)
+
+*Pages 40-1 of Alexander Graham Bell's unpublished laboratory notebook (1875-76), describing first successful experiment with the telephone. Source: [Wikimedia Commons](https://en.wikipedia.org/wiki/File:AGBell_Notebook.jpg)*
+
+So my idea is to make a blog that facilitates
+
+- writing of daily logs
+- collecting and linking information
+- drafting of articles and essays
+- building a knowledgebase
+
+
 
 ## What is Jekyll?
+
+Jekyll is a static site generator that parses a collection of simple textfiles (using a minimalist Markup) into static  websites.  
 
 
 ## Details
@@ -24,7 +40,7 @@ This is a template for the static site generator [Jekyll](http://jekyllrb.com/).
 - **log your geolocation** with the `place` parameter
 - **math equations** using [mathjax.org]() (renders $ \LaTeX $ syntax).
 
-## Requirements
+### Requirements
 
 - [Jekyll](http://jekyllrb.com/)
 - a convenient text editor (e.g. Geany, Notepad, Notepad++, Atom)
@@ -34,7 +50,7 @@ Recommended:
 - git
 - a Dropbox or GitHub account, or access to a webserver (for Deployment)
 
-## Set-up
+### Set-up
 
 You can clone this repository
 
@@ -43,9 +59,9 @@ You can clone this repository
 and use `jekyll serve` to run it locally. It will be available in your browser under the URL `localhost:4000`.
 
 
-## Use
+### Use
 
-### new posts
+#### new posts
 
 Just create a new file in the `_posts` directory with a filename of the scheme `YYYY-MM-DD-title.md` (file ending .md is for Markdown but [other filetypes are possible]()) and add a YAML front matter, which is two lines of three dashes each, with some information about your post in between:
 
@@ -65,7 +81,7 @@ You do not necessarily need to enter any information. You could leave just an em
 
 Posts are typically written in [Markdown](http://kramdown.gettalong.org/syntax.html) (Jekyll by default is using kramdown as a parser, but that can be configured).
 
-### Pages
+#### Pages
 
 Information beyond posts, content that deserves a special spot on your log, is placed in pages. These are markdown files placed in the base directory with a simple filename (*not* the year-month-day name as for posts). Examples are `about.md`, `tags.md`, `index.html` and `archive.html`. They are rendered into static pages using a slightly different layout and are granted a spot in your header (the menu) at the top of the page.
 
@@ -92,32 +108,32 @@ You can create new task list files by setting them up with a frontmatter that sp
 of course you can change the title, but the layout *must* be set as `tasks`. You can write nested task lists, which opens wonderful possibilities for project management. Imagine that tasks can use links to connect to posts on the site, to e-mail addresses, to websites.
 
 
-## Customize
+### Customize
 
 A few things require your personalized entries, to link the log to your person and to deliver additional information about
 
-### Title and Author information
+#### Title and Author information
 
-### About page
+#### About page
 
-### version control
+#### version control
 
-### License
+#### License
 
-### Theme color
+#### Theme color
 
-### Rmarkdown or knitr reports
+#### Rmarkdown or knitr reports
 
-### Configure Jekyll
-
-
+#### Configure Jekyll
 
 
-## Deployment
+
+
+### Deployment
 
 If you want to access the log from anywhere on the internet you will need one of the following solutions. For these you will have to specify the `url` and `baseurl`, as well as the target directory for generation `destination: `,  parameters in `_config.yml`. Just enter the values described below.  
 
-### Dropbox
+#### Dropbox
 
 In my opinion the perfect solution for a quick and semi-private deployment: Dropbox can serve a static site placed in the `/Public` folder. Just keep the log directory anywhere on your PC, but preferably in a private section of your Dropbox and specify `destination: ../../Public/lablog `, i.e. the relative path from your blog directory to the target directory. Then build your blog.
 
@@ -134,7 +150,7 @@ Now build again and navigate in your browser to `https://dl.dropboxusercontent.c
 
 Save this long, cryptic link as a bookmark or to load at browser start. For the future, all you need is to re-run the simple `jekyll build` command each time you updated a file.
 
-### GitHub pages
+#### GitHub pages
 
 Advantage:
 
@@ -156,7 +172,7 @@ Specify:
     baseurl: "/lablog"
 
 
-#### any other webserver
+##### any other webserver
 
 If you want to keep it truly private, the only solution will be a webserver.
 
