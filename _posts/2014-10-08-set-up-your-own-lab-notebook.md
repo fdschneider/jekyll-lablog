@@ -14,7 +14,7 @@ The requirements are:
 
 Additionally, what helps is some basic knowledge of [git] and having a Dropbox or GitHub account, or access to a webserver for the deployment on the internet.
 
-## Set-up at home
+## Set-up locally
 
 You can download the [zip-file](https://github.com/fdschneider/jekyll-lablog/archive/dev.zip) or clone the [repository from GitHub](https://github.com/fdschneider/jekyll-lablog)
 
@@ -30,4 +30,4 @@ You should open the file `_config.yml` and enter some personal variables, such a
 
 ## Put it online
 
-If you want to access the log from anywhere on the internet you might want one of the solutions described in the official [README](https://github.com/fdschneider/jekyll-lablog#deployment). For instance, you can use your Dropbox account to make that happen. You just need to specify the `url` and `baseurl`, as well as the target directory for generation `destination: ` in the `_config.yml`.
+If you want to access the log from anywhere on the internet you might want one of the solutions described in the  [README](https://github.com/fdschneider/jekyll-lablog#deployment). For instance, you can [use your Dropbox account]({{ site.baseurl }}{% post_url 2014-10-10-put-your-labnotebook-online %}) to make it available online. You just need to specify the `url` and `baseurl`, as well as the target directory for generation `destination` in the `_config.yml`.
