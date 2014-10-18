@@ -15,8 +15,9 @@ twitter_username:
 website : git@github.com:fdschneider/jekyll-lablog.git
 
 # Build settings
-markdown: redcarpet
-highlighter: false
+markdown: kramdown
+kramdown:
+  input: GFM
 
 defaults:   # overwrite with in YAML frontmatter, e.g. 'place: New York'
   -
