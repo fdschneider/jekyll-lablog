@@ -11,12 +11,15 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
+$code-font-family: 'Ubuntu Mono';
+$code-font-size: 15px;
+
 $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
+$brand-color:      #009999;
+$brand-color-dark: darken($brand-color, 50%);
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);

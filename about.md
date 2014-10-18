@@ -4,16 +4,19 @@ title: About
 ---
 
 This is a template for the static site generator [Jekyll](http://jekyllrb.com/). based on [Jekyll's default theme by jglovier](https://github.com/jglovier/jekyll-new). It adds functionality that targets at the use as a research log or notebook.
+You can view the [code and documentation on GitHub](https://github.com/fdschneider/jekyll-lablog).
 
-You can view the [code and documentation on GitHub](https://github.com/fdschneider/jekyll-lablog) or clone it via git
+### getting started
 
-    git clone git@github.com:fdschneider/jekyll-lablog.git
+1. clone it via git
 
-Install [Jekyll](http://jekyllrb.com/) and run
+        git clone git@github.com:fdschneider/jekyll-lablog.git
 
-    jekyll serve /jekyll-lablog
+2. Install [Jekyll](http://jekyllrb.com/) and run
 
-Open your browser and navigate to `localhost:4000`.
+        jekyll serve /jekyll-lablog
+
+3. Open your browser and navigate to `localhost:4000`.
 
 
 ### Features:
