@@ -111,7 +111,6 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
 
@@ -263,6 +262,61 @@ z-index: 1;
 
 
 
+
+/**
+ * collapse buttons
+ */
+
+label i.toggle-content  {
+  float: right;
+  color: $grey-color-light;
+  &:hover {
+    color: $grey-color;
+  }
+
+  &:before {
+    font: normal normal normal 100% FontAwesome;
+    content: "\f067";
+  }
+
+}
+
+
+.collapse {
+  max-height: 0;
+  overflow: hidden;
+  /*padding-left: 30px;*/
+  transition: max-height 0.8s ease;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    top: 0;
+
+  &:checked ~ .collapse {
+    max-height: 100%;
+    transition: max-height 0.8s ease;
+  }
+
+  &:checked ~ label + {
+    i.toggle-content  {
+      color: $grey-color;
+      &:before {content: "\f068";}
+      &:hover {
+        color: $grey-color-light;
+      }
+    }
+  }
+
+}
+
 /**
  * Tasklists
  */
@@ -274,10 +328,15 @@ z-index: 1;
       text-indent: -1.4em;
       font-size: $base-font-size * 1.2;
 
+      @include media-query($on-palm) {
+        font-size: $base-font-size;
+      }
 
         &:before {
         float: left;
         width: 1.4em;
+
+
       }
     }
 
@@ -285,19 +344,22 @@ z-index: 1;
       color: $grey-color;
       text-decoration: line-through;
       &:before {
-        content: "\2611\ ";
+        font: normal normal normal $base-font-size FontAwesome;
+        padding-top: 0.6em;
+        content: "\f046";
         color: $grey-color;
       }
     }
 
     li.box:before {
-        content: "\2610\ ";
-        color: $grey-color;
+        font: normal normal normal $base-font-size FontAwesome;
+        padding-top: 0.6em;
+        content: "\f096";
     }
 
     &:first-child {
       line-height: $base-font-size * 1.5;
-    padding-bottom: 0.5em;
+      padding-bottom: 0.5em;
 
     li {
       font-size: $base-font-size;
@@ -309,13 +371,16 @@ z-index: 1;
       }
     }
     li.box_done:before {
-        content: "\2611\ ";
+        font: normal normal normal $base-font-size FontAwesome;
+        padding-top: 0.3em;
+        content: "\f046";
         color: $grey-color;
     }
 
     li.box:before {
-        content: "\2610\ ";
-        color: $grey-color;
+        font: normal normal normal $base-font-size FontAwesome;
+        padding-top: 0.3em;
+        content: "\f096";
     }
 
     }
