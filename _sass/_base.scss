@@ -216,49 +216,6 @@ a.tag {
 
 
 
-/**
- * browse buttons
- */
-/** TODO: Make responsive and use variables and mixins **/
-.button {
-position: fixed;
-margin: auto auto auto auto;
-font-size: 450%;
-color:#DDDDDD;
-}
-
-.turn{
-position: fixed;
-height: 300px;
-margin: auto 0 auto 0;
-width: 75px;
-top: 0px;
-text-align: center;
-font-size: 450%;
-color:#DDDDDD;
-
-}
-
-.turn span{
-position:absolute;
-width:100%;
-height:100%;
-line-height: 300px;
-top: 150px;
-left: 0;
-/*padding-top: 150px;*/
-/* edit: added z-index */
-z-index: 1;
-/* edit: fixes overlap error in IE7/8,
-   make sure you have an empty gif
- background-image: url('empty.gif');*/
-}
-
-.turn span:hover{background-color:#DDDDDD;}
-
-.turn a:link {color:#DDDDDD; text-decoration:none}
-.turn a:visited {color:#DDDDDD;text-decoration:none}
-.turn a:hover {color:#F5F5F5;text-decoration:none;}
 
 
 
@@ -324,6 +281,47 @@ input[type=checkbox] {
       list-style-type: none;
       line-height: $base-font-size * 2;
 
+
+    span.task_quite_important {
+      display: inline;
+      padding: .0em .6em .0em;
+      font-size: 100%;
+      font-weight: bold;
+      line-height: 1;
+      color: white;
+      background-color: #C3DA67;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 1em;
+    }
+    span.task_important {
+      display: inline;
+      padding: .0em .6em .0em;
+      font-size: 100%;
+      font-weight: bold;
+      line-height: 1;
+      color: white;
+      background-color: #00ADEF;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 1em;
+    }
+    span.task_very_important {
+      display: inline;
+      padding: .0em .6em .0em;
+      font-size: 100%;
+      font-weight: bold;
+      line-height: 1;
+      color: white;
+      background-color: #F05A28;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 1em;
+    }
+
     li {
       text-indent: -1.4em;
       font-size: $base-font-size * 1.2;
@@ -344,16 +342,16 @@ input[type=checkbox] {
       color: $grey-color;
       text-decoration: line-through;
       &:before {
-        font: normal normal normal $base-font-size FontAwesome;
-        padding-top: 0.6em;
+        font: normal normal normal $base-font-size lablogIcons;
+        padding-top: 0.5em;
         content: "\f046";
         color: $grey-color;
       }
     }
 
     li.box:before {
-        font: normal normal normal $base-font-size FontAwesome;
-        padding-top: 0.6em;
+        font: normal normal normal $base-font-size lablogIcons;
+        padding-top: 0.5em;
         content: "\f096";
     }
 
@@ -371,14 +369,14 @@ input[type=checkbox] {
       }
     }
     li.box_done:before {
-        font: normal normal normal $base-font-size FontAwesome;
+        font: normal normal normal $base-font-size lablogIcons;
         padding-top: 0.3em;
         content: "\f046";
         color: $grey-color;
     }
 
     li.box:before {
-        font: normal normal normal $base-font-size FontAwesome;
+        font: normal normal normal $base-font-size lablogIcons;
         padding-top: 0.3em;
         content: "\f096";
     }
