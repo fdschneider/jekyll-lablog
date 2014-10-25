@@ -85,7 +85,7 @@
 
       }
       &:checked ~ label:before {
-        font: normal normal normal $base-font-size*2 FontAwesome;
+        font: normal normal normal $base-font-size*2 lablogIcons;
         content: "\f00d";
       }
       }
@@ -100,7 +100,7 @@
     color: $brand-color-dark;
 
     &:before {
-      font: normal normal normal $base-font-size*2 FontAwesome;
+      font: normal normal normal $base-font-size*2 lablogIcons;
       content: "\f0c9";
     }
 
