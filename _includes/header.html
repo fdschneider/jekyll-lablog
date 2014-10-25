@@ -9,47 +9,39 @@
   <label for="menu"></label>
   <div class="trigger">
 
+    <a class="page-link" href="{{ site.baseurl }}/index.html"><span style = "font-family: 'lablogIcons';">  &#xe605; </span> {{ site.title }}</a>
 
-<a class="page-link" href="{{ site.baseurl }}/index.html"><span style = "font-family: 'lablogIcons';">  &#xe605; </span> {{ site.title }}</a>
+    {% for page in site.pages %}{% if page.url == "/tasks.html" %}
+      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xf046; </span> {{ page.title }}</a>
+    {% endif %}{% endfor %}
 
-
-    {% for page in site.pages %}
-      {% if page.url == "/archive.html" %}
-
-<a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xe602; </span> {{ page.title }}</a>
-
-      {% endif %}
-
-      {% if page.url == "/tags.html" %}
-
+    {% for page in site.pages %}{% if page.url == "/tags.html" %}
 <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xe600; </span> {{ page.title }}</a>
+    {% endif %}{% endfor %}
 
-      {% endif %}
+    {% for page in site.pages %}{% if page.url == "/archive.html" %}
+      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xe602; </span> {{ page.title }}</a>
+    {% endif %}{% endfor %}
 
-      {% if page.url == "/tasks.html" %}
+    {% for page in site.pages %}{% if page.menu %}
+      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xe60a; </span> {{ page.title }}</a>
+    {% endif %}{% endfor %}
 
-<a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xf046; </span> {{ page.title }}</a>
+    {% for post in site.posts %}{% if post.menu %}
+      <a class="page-link" href="{{ post.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  </span> {{ post.title }}</a>
+    {% endif %}{% endfor %}
 
-      {% endif %}
-    {% endfor %}
+    {% for page in site.pages %}{% if page.url == "/MENU.html" %}
+    <div class="menu-content">
+      {{ page.content | markdownify }}
+    </div>
+    {% endif %}{% endfor %}
 
-
-
-    {% for page in site.pages %}
-      {% if page.menu %}
-
-<a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xe60a; </span> {{ page.title }}</a>
-
-      {% endif %}
-    {% endfor %}
-
-{% for page in site.pages %}
-{% if page.url == "/MENU.html" %}
-<div class="menu-content">
-  {{ page.content | markdownify }}
-</div>
-{% endif %}
-{% endfor %}
+    {% for page in site.pages %}{% if page.layout == 'menu' %}
+      <div class="menu-content">
+        {{ page.content | markdownify }}
+      </div>
+    {% endif %}{% endfor %}
 
   </div>
 
