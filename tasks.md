@@ -1,18 +1,24 @@
 ---
-layout: tasks
-title : Tasks
-
+layout: default
+title: Tasks
 ---
 
-## [ ] Project 1
+<div class="post">
 
-- [ ] fix a bug in `soup.r` due: 2014-12-24
-- [ ] write an [e-mail to Florian](flo_schneider@web.de)
-- [ ] write documentation
-   - [ ] for `soup.r`
-     - [ ] third level of tasks
-     - [ ] let's see how it works
-     - [ ] they should be tiny and without linebreaks
-   - [x] soup recipe
-   - notes without a checkbox
-- [x] read [that article about soup](https://en.wikipedia.org/wiki/Soup)
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <article class="post-content">
+
+  {% for page in site.pages %}
+  {% if page.layout == "tasks" %}
+
+    {{ page.content | markdownify | replace: '<ul>', '<ul class = "tasklist">' | replace: '<li>[ ]', '<li class = "box">' | replace: '<li>[x]', '<li class = "box_done">' | replace: '<h1> [ ]', '<h1 class = "milestone">' | replace: '<h2> [ ]', '<h2 class = "milestone">' | replace: '(!)', '<span class = "task_quite_important">!</span>' | replace: '(!!)', '<span class = "task_important">!</span>' | replace: '(!!!)', '<span class = "task_very_important">!</span>'}}
+
+  {% endif %}
+  {% endfor %}
+
+  </article>
+
+</div>

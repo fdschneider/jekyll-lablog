@@ -2,7 +2,9 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $brand-color;
+    border-top: 0px solid $brand-color;
+    border-bottom: 0px solid $grey-color-light;
+
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -10,6 +12,7 @@
 }
 
 .site-title {
+    font-style: italic;
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
@@ -22,8 +25,9 @@
     }
 }
 
-/**
- * Site menu
+
+/*
+ *Site menu
  */
 
 .main-menu {
@@ -64,19 +68,29 @@
           .page-link {
                font-size: $base-font-size*1.2;
                color: $brand-color;
-               text-align: right;
-               line-height: $base-line-height;
+               text-align: left;
                display: block;
+               line-height: $base-line-height;
                clear: both;
-               padding: 5px 10px;
+               margin: 0px 30px;
+               padding: 5px 20px;
                    // Gaps between nav items, but not on the first one
                    &:first-child {
                        margin-top: 20px;
                    }
-                   &:hover {
-                     background-color: lighten($brand-color-dark, 2%);
-                   }
            }
+
+           .menu-content {
+                font-size: $base-font-size*0.8;
+                color: $brand-color;
+                line-height: $base-line-height;
+                text-align: left;
+                display: block;
+                clear: both;
+                margin: 0px 30px;
+                padding: 5px 20px;
+              }
+
       }
 
 
@@ -85,7 +99,7 @@
 
       }
       &:checked ~ label:before {
-        font: normal normal normal $base-font-size*2 FontAwesome;
+        font: normal normal normal $base-font-size*2 lablogIcons;
         content: "\f00d";
       }
       }
@@ -94,14 +108,15 @@
     position: fixed;
     right: 0px;
     top: 0px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-right: 20px;
     z-index: 3;
     color: $brand-color-dark;
 
     &:before {
-      font: normal normal normal $base-font-size*2 FontAwesome;
+      font: normal normal normal $base-font-size*2 lablogIcons;
       content: "\f0c9";
+
     }
 
     &:hover {
@@ -113,14 +128,64 @@
   .trigger {
       width: 0;
       overflow: hidden;
-      transition: width 0.5s ease;
-      .page-link {
+      transition: width 0.3s ease;
+      .page-link, .menu-content {
           display: none;
           }
     }
 
 }
 
+
+
+/**
+ * browse buttons
+ */
+/** TODO: Make responsive and use variables and mixins **/
+
+.turn{
+font-family: lablogIcons;
+position: fixed;
+height: 300px;
+margin: auto 0 auto 0;
+width: 75px;
+top: 0px;
+text-align: center;
+font-size: 200%;
+color: $grey-color-light;
+
+  span {
+    position: absolute;
+    width:100%;
+    height:100%;
+    line-height: 300px;
+    top: 150px;
+    left: 0;
+    z-index: 1;
+
+    & :hover{background-color:#DDDDDD;}
+
+  }
+
+  @include media-query($on-laptop + 50) {
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    margin: auto 0 0 0;
+    width: 50%;
+    background-color: $background-color;
+    border-top: 1px solid $grey-color-light;
+    span { line-height: 25px; top: 12px;}
+  }
+
+
+  a:link {color: $brand-color-dark; text-decoration:none}
+  a:visited {color: $brand-color-dark; text-decoration:none}
+  a:hover {color: $brand-color; text-decoration:none;}
+
+
+
+}
 
 
 
