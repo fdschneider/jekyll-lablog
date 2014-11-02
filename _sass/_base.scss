@@ -349,6 +349,9 @@ input[type=checkbox] {
     li.box_done {
       color: $grey-color;
       text-decoration: line-through;
+      max-height: 0;
+      overflow: hidden;
+
       &:before {
         font: normal normal normal $base-font-size lablogIcons;
         padding-top: 0.5em;
