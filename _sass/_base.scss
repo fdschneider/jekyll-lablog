@@ -276,6 +276,15 @@ input[type=checkbox] {
 /**
  * Tasklists
  */
+    p.tasklist_id {
+     margin-top: 1em;
+     border-top: 1px solid $grey-color;
+     font-size: 8pt;
+     color: $grey-color;
+     text-align: right;
+   }
+
+
    ul.tasklist {
       list-style-type: none;
       line-height: $base-font-size * 2;
