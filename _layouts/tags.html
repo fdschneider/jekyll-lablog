@@ -24,7 +24,7 @@ layout: default
    <ul>
      {% for post in site.tags[this_word] %}{% if post.title != null %}
 
-     <li> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | markdownify }}</a> <span class = "post-meta"> • {{ post.date | date: "%B %e, %Y" }}</span></li>
+     <li> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <span class = "post-meta"> • {{ post.date | date: "%B %e, %Y" }}</span></li>
 
      {% endif %}{% endfor %}
    </ul>
