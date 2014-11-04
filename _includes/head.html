@@ -6,8 +6,6 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
-    <base href= "{{ site.url | append: site.baseurl | append: '/index.html' }}" />
-
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -17,26 +15,26 @@
     {% endif %}
 
 <!-- loading fonts -->
-<!-- Open Sans -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,300italic,700italic' rel='stylesheet' type='text/css'><!-- own icon font, created via https://icomoon.io/  -->
-<link href="{{ site.baseurl }}/_assets/lablogIcons/style.css" rel="stylesheet">
+    <!-- Open Sans -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,300italic,700italic' rel='stylesheet' type='text/css'><!-- own icon font, created via https://icomoon.io/  -->
+    <link href="{{ site.baseurl }}/_assets/lablogIcons/style.css" rel="stylesheet">
 
-<!-- Ubuntu Mono for code -->
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- Ubuntu Mono for code -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!-- mathjax.org for math equations -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-imageFont: null,
-extensions: ["tex2jax.js"],
-jax: ["input/TeX","output/HTML-CSS"],
-tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} ,
-menuSettings: { context: "Browser" }
-});
-</script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    imageFont: null,
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]} ,
+    menuSettings: { context: "Browser" }
+    });
+    </script>
 
-<script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+    <script type="text/javascript"  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 
 <!-- highlight.js for code syntax highlighting-->
 <link rel="stylesheet" href="{{ '/_assets/highlight/styles/github.css' | prepend: site.baseurl | prepend: site.url }}">
