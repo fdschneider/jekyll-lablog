@@ -1,6 +1,7 @@
 ---
 title: "Snapshots with greenshot"
 date: "2014-10-15"
+author: fdschneider
 tag:
  - log
  - howto

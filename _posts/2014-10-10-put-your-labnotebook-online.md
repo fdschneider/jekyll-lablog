@@ -1,5 +1,6 @@
 ---
 title: "Put your labnotebook online"
+author: fdschneider
 tag:
  - log
  - howto

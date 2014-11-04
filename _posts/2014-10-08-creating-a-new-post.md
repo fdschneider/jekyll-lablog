@@ -2,10 +2,11 @@
 title: "Creating a New Post"
 date: "2014-10-07"
 updated: "2014-10-08"
+author: fdschneider
 tags:
   - posts
   - soup
-  
+
 ---
 
 Just create a new file in the `_posts` directory with a filename of the scheme `YYYY-MM-DD-title.md` (file ending .md is for Markdown but [other filetypes are possible]()) and add a YAML front matter, which is two lines of three dashes each, with some information about your post in between:

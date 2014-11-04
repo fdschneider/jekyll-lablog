@@ -1,5 +1,6 @@
 ---
 title: "Full Math Support"
+author: fdschneider
 tags:
  - math
 
