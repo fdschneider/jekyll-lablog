@@ -1,5 +1,5 @@
 # Site settings
-title: My labnotebook
+title: jekyll-lablog # type your own lablog title here
 
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
