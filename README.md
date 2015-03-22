@@ -110,23 +110,20 @@ of course you can change the title, but the layout *must* be set as `tasks`. You
 
 ### Customize
 
-A few things require your personalized entries, to link the log to your person and to deliver additional information about
+A few things require your personalized entries, to link the log to your person and to deliver additional information about you and your affiliations.
 
 #### Title and Author information
 
-#### About page
+Add your site title and your name, e-mail address, github, twitter etc. in the `_config.yml`. They will show up in the footer of the website.
 
-#### version control
+#### About page
+Write a short page about you and your work. This is optional. The default `about.md` can be deleted from the directory.
 
 #### License
+If you intend to invite others to read and browse your lablog, you should chose a license or copyright specification to clarify how content on the lablog can be re-used. The lablog defaults to the open [Creative Commons Attribution 4.0](https://creativecommons.org/choose/?lang=en), which allows the non-commercial and commercial re-publication and even sublicensing of your work. Replace or delete this statement in the file `_includes/footer.html`.
 
 #### Theme color
-
-#### Rmarkdown or knitr reports
-
-#### Configure Jekyll
-
-
+It is easy to change the color of links and the menu by setting a different color for the variable `$brand-color` in the style file `css/main.scss`.
 
 
 ### Deployment
@@ -174,8 +171,7 @@ Specify:
 
 ##### any other webserver
 
-If you want to keep it truly private, the only solution will be a webserver.
-
+If you want to keep it truly private, the only solution will be hosting your jekyll blog on a webserver.
 
 
 ## Features to come:
