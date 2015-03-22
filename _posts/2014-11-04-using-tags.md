@@ -26,3 +26,5 @@ tags:
 They will be displayed automatically on the page, in the index of posts and on the archive. Of course they will also show up on the 'tags' page.
 
 It is a feature of liquid, which is used to render these pages, that capitalized tags will be sorted before small-case tags (*i.e.* A, B, C, a, b, c). This can be utilized by giving certain tags priority just by using upper case names.
+
+The section 'related posts', which now automatically shows up at the bottom of each post, provides links to posts that share the same set of tags. (This is buggy, though) 

@@ -36,9 +36,6 @@ layout: default
   {% endif %}
   <li class="relatedPost">
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-  {% if post.series %}
-  (Series: {{ post.series }})
-  {% endif %}
   </a> <span class = "post-meta"> • {{ post.date | date: "%B %e, %Y" }}</span>
   {% if post.tags %}
   <span class = "post-meta"> • </span>
