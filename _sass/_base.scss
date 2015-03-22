@@ -4,7 +4,7 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
+    margin: 2px;
     padding: 0;
 }
 
@@ -227,14 +227,14 @@ a.tag {
  */
 
 label i.toggle-content  {
-  float: right;
+  padding-left: 0px;
   color: $grey-color-light;
   &:hover {
     color: $grey-color;
   }
 
   &:before {
-    font: normal normal normal 100% FontAwesome;
+    font: normal normal normal 100% lablogIcons;
     content: "\f067";
   }
 
@@ -245,7 +245,7 @@ label i.toggle-content  {
   max-height: 0;
   overflow: hidden;
   /*padding-left: 30px;*/
-  transition: max-height 0.8s ease;
+  transition: max-height 1s ease;
 }
 
 input[type=checkbox] {
@@ -261,7 +261,7 @@ input[type=checkbox] {
 
   &:checked ~ .collapse {
     max-height: 100%;
-    transition: max-height 0.8s ease;
+    transition: max-height 1s ease;
   }
 
   &:checked ~ label + {
@@ -289,9 +289,9 @@ input[type=checkbox] {
 
 
    ul.tasklist {
+      font-weight: 300;
       list-style-type: none;
       line-height: $base-font-size * 2;
-
 
     span.task_quite_important {
       display: inline;
@@ -333,8 +333,9 @@ input[type=checkbox] {
       border-radius: 1em;
     }
 
-    li {
+    & > li {
       text-indent: -1.4em;
+      font-style: italic;
       font-size: $base-font-size * 1.2;
 
       @include media-query($on-palm) {
@@ -344,60 +345,97 @@ input[type=checkbox] {
         &:before {
         float: left;
         width: 1.4em;
-
-
       }
-    }
 
-    li.box_done {
-      color: $grey-color;
-      text-decoration: line-through;
-      max-height: 0;
-      overflow: hidden;
+      &.box {
+        font-style: normal;
 
-      &:before {
-        font: normal normal normal $base-font-size lablogIcons;
-        padding-top: 0.5em;
-        content: "\f046";
+
+        &:before {
+            font: normal normal normal $base-font-size lablogIcons;
+            padding-top: 0.5em;
+            content: "\f096";
+        }
+      }
+
+      &.box_done {
+        font-style: normal;
+        font-size: $base-font-size * 1.2;
         color: $grey-color;
+        text-decoration: line-through;
+        max-height: 0;
+        overflow: hidden;
+
+        &:before {
+          font: normal normal normal $base-font-size lablogIcons;
+          padding-top: 0.5em;
+          content: "\f046";
+          color: $grey-color;
+        }
       }
-    }
 
-    li.box:before {
-        font: normal normal normal $base-font-size lablogIcons;
-        padding-top: 0.5em;
-        content: "\f096";
-    }
+      & > ul {
+          padding-bottom: 0.5em;
 
-    &:first-child {
-      line-height: $base-font-size * 1.5;
-      padding-bottom: 0.5em;
+        & > li {
+          line-height: $base-font-size * 1.5;
+          font-size: $base-font-size;
+          text-indent: -1.4em;
 
-    li {
-      font-size: $base-font-size;
-      text-indent: -1.4em;
+          &:before {
+            float: left;
+            width: 1.4em;
+          }
 
-      &:before {
-        float: left;
-        width: 1.4em;
+        &.box_done:before {
+            font: normal normal normal $base-font-size lablogIcons;
+            padding-top: 0.3em;
+            content: "\f046";
+            color: $grey-color;
+        }
+
+        &.box:before {
+            font: normal normal normal $base-font-size lablogIcons;
+            padding-top: 0.3em;
+            content: "\f096";
+        }
+        & > ul {
+            padding-bottom: 0.5em;
+
+          & > li {
+            line-height: $base-font-size * 1.2;
+            font-size: $base-font-size * 0.9;
+            text-indent: -1.4em;
+
+            &:before {
+              float: left;
+              width: 1.4em;
+            }
+
+          &.box_done:before {
+              font: normal normal normal $base-font-size lablogIcons;
+              padding-top: 0em;
+              content: "\f046";
+              color: $grey-color;
+          }
+
+          &.box:before {
+              font: normal normal normal $base-font-size lablogIcons;
+              padding-top: 0em;
+              content: "\f096";
+          }
+
+        }
+        }
       }
-    }
-    li.box_done:before {
-        font: normal normal normal $base-font-size lablogIcons;
-        padding-top: 0.3em;
-        content: "\f046";
-        color: $grey-color;
-    }
-
-    li.box:before {
-        font: normal normal normal $base-font-size lablogIcons;
-        padding-top: 0.3em;
-        content: "\f096";
-    }
-
     }
 
   }
+
+}
+
+
+
 
 /**
  * Clearfix
