@@ -23,13 +23,24 @@
       <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xe602; </span> {{ page.title }}</a>
     {% endif %}{% endfor %}
 
+    <br>
+
     {% for page in site.pages %}{% if page.menu %}
-      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  &#xe60a; </span> {{ page.title }}</a>
+      <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
+        <span style = "font-family: 'lablogIcons';">  &#xe60a; </span>
+        {% assign menutag = page.title | truncate: 10  %}
+        {% if page.menu.size !=  %}
+          {% assign menutag = page.menu %}
+        {% endif %}
+        {{ menutag }}
+      </a>
     {% endif %}{% endfor %}
 
     {% for post in site.posts %}{% if post.menu %}
       <a class="page-link" href="{{ post.url | prepend: site.baseurl }}"><span style = "font-family: 'lablogIcons';">  </span> {{ post.title }}</a>
     {% endif %}{% endfor %}
+
+    <br>
 
     {% for page in site.pages %}{% if page.url == "/MENU.html" %}
     <div class="menu-content">
