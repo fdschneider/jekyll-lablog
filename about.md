@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+menu: true
+
 ---
 
 This is a template for the static site generator [Jekyll](http://jekyllrb.com/). Starting from [Jekyll's default theme by jglovier](https://github.com/jglovier/jekyll-new) I added functionality that targets at the use as a research log or notebook.

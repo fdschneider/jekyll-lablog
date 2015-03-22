@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('UbuntuMono-Regular.eot');
+  src: url('UbuntuMono-Regular.eot#iefix') format('embedded-opentype'),
+       url('UbuntuMono-Regular.woff') format('woff'),
+       url('UbuntuMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('UbuntuMono-Bold.eot');
+  src: url('UbuntuMono-Bold.eot#iefix') format('embedded-opentype'),
+       url('UbuntuMono-Bold.woff') format('woff'),
+       url('UbuntuMono-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('UbuntuMono-Italic.eot');
+  src: url('UbuntuMono-Italic.eot#iefix') format('embedded-opentype'),
+       url('UbuntuMono-Italic.woff') format('woff'),
+       url('UbuntuMono-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url('UbuntuMono-BoldItalic.eot');
+  src: url('UbuntuMono-BoldItalic.eot#iefix') format('embedded-opentype'),
+       url('UbuntuMono-BoldItalic.woff') format('woff'),
+       url('UbuntuMono-BoldItalic.ttf') format('truetype');
+}

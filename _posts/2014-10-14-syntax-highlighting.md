@@ -1,6 +1,7 @@
 ---
 title: "Syntax highlighting"
 date: "2014-10-14"
+author: fdschneider
 tag:
  - log
 

@@ -3,7 +3,7 @@
  */
 .site-header {
     border-top: 0px solid $brand-color;
-    border-bottom: 0px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
 
     min-height: 56px;
 
@@ -12,7 +12,8 @@
 }
 
 .site-title {
-    font-style: italic;
+    font-style: regular;
+    font-weight: 400;
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;

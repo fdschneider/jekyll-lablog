@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+{% if page.github %}
+
+<a href = "{{ page.github | prepend: 'https://github.com/'}}">Project on Github</a> |
+<a href = "{{ page.github | prepend: 'https://github.com/'| append: '/issues'}}"> Issues</a>
+<br>
+
+<!-- to add: github commits -->
+{% endif %}
+
+  <article class="post-content">
+
+    {{ content }}
+
+  </article>
+
+{% for todo in site.pages %}
+{% if todo.category == page.category and todo.layout == 'tasks' %}
+
+<hr>
+<h2> Tasks: </h2>
+
+<div class = "tasklist">
+{{ todo.content | markdownify | replace: '<ul>', '<ul class = "tasklist">' | replace: '<li>[ ]', '<li class = "box">' | replace: '<li>[x]', '<li class = "box_done">'  }}
+{% endif %}
+{% endfor %}
+
+<!-- add loop to add pages of category or shared tags-->
+
+<hr>
+<h2> Posts: </h2>
+
+<ul class="post-list">
+  {% for post in site.posts %}{% if post.category == page.category or post.tags contains page.category %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.updated %} • <b>updated: </b>{{ post.updated | date_to_long_string }}{% endif %}{% if post.author %} • {{ post.author }}{% endif %}{% if post.place %} • {{ post.place }}{% endif %} </span>
+
+
+      {% if post.tags %}  <span class="post-meta"> • </span>
+       {% for tag in post.tags %}
+         <a href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag" class = "tag" >
+           {{ tag }} </a>  &nbsp
+       {% endfor %}
+      {% endif %}
+
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </li>
+  {% endif %}{% endfor %}
+</ul>
+
+
+
+
+</div>

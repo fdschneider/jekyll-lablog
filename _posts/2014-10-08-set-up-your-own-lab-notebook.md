@@ -1,5 +1,6 @@
 ---
 title: "Set up your own lab notebook"
+author: fdschneider
 tags:
  - log
  - howto
@@ -12,7 +13,7 @@ The requirements are:
 - [Jekyll](http://jekyllrb.com/)
 - a convenient text editor (e.g. Geany, Notepad, Notepad++, Atom)
 
-Additionally, what helps is some basic knowledge of [git] and having a Dropbox or GitHub account, or access to a webserver for the deployment on the internet.
+Additionally, what helps is some basic knowledge of [git](http://git-scm.com/) and having a Dropbox or GitHub account, or access to a webserver for the deployment on the internet.
 
 ## Set-up locally
 

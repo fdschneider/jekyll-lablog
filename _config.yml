@@ -20,6 +20,8 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+noindex: true # if true, google will ignore your pages!
+
 defaults:   # overwrite with in YAML frontmatter, e.g. 'place: New York'
   -
     scope:
